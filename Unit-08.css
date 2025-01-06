@@ -41,6 +41,7 @@ h1 {
     font-family: "Source Sans 3", serif;
     font-weight: 400;
     font-size: 25px;
+    padding: 0 0 0 10px;
 }
 
 
@@ -54,33 +55,32 @@ h1 {
     margin: 10px;
 }
 .avatar {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     border-radius: 60%;
     width: 110px;
     height: 115px;
-    margin-top: 18px;
+    margin-top: 19px;
     margin-left: 20px;
 }
 .text-container {
-    border: ;
     width: auto;
     padding: 0 0 0 20px;
 }
 .name {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     font-family: "Source Sans 3", serif;
     font-weight: 400;
     font-size: 23px;
     margin-bottom: 0;
 }
 .email {
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     font-family: "Source Sans 3", serif;
     font-weight: 200;
     margin-bottom: 0;
 }
 .address {
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     font-family: "Source Sans 3", serif;
     font-weight: 200;
     font-size: 18px;
