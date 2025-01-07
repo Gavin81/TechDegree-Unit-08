@@ -2,6 +2,15 @@ body {
     position: relative;
 }
 
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.grid-container .card {
+    flex-basis: calc(33.333% - 45px);
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -29,8 +38,7 @@ body {
     cursor: pointer;
 }
 .modal-content {
-    display: flex;
-    flex-wrap: wrap;
+
 }
 
 .hidden {
@@ -45,7 +53,7 @@ h1 {
     font-family: "Source Sans 3", serif;
     font-weight: 400;
     font-size: 25px;
-    padding: 0 0 0 10px;
+    padding: 0 0 0 15px;
 }
 
 
@@ -54,8 +62,6 @@ h1 {
     border: 2px solid lightgrey;
     width: 20%;
     border-radius: 7px;
-    /* display: flex;
-    flex-wrap: wrap; */
     margin: 15px;
 }
 .avatar {
@@ -67,26 +73,26 @@ h1 {
     margin-left: 20px;
 }
 .text-container {
-    border: 2px solid green;
-    text-align: ;
-    width: ;
-    padding: 0 0 0 0px;
+    /* border: 2px solid green; */
+    float: right;
+    width: 73%;
+    padding: 0 0 0 10px;
 }
 .name {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     font-family: "Source Sans 3", serif;
     font-weight: 400;
     font-size: 23px;
     margin-bottom: 0;
 }
 .email {
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     font-family: "Source Sans 3", serif;
     font-weight: 200;
     margin-bottom: 0;
 }
 .address {
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     font-family: "Source Sans 3", serif;
     font-weight: 200;
     font-size: 18px;
