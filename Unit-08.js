@@ -15,7 +15,6 @@ fetch(urlAPI)
 
 
 // Employee function that displays employee data
-
 function displayEmployees(employeeData){
     employees = employeeData;
     let employeeHTML = '';
@@ -87,3 +86,41 @@ modalCLose.addEventListener('click', () => {
 
 
 index.html.remove(employeeHTML && modalHTML);
+
+
+card.addEventListener('click', (e) => {
+    const personCard = e.target.closest('.card');
+    if(!personCard) return;
+
+    const personName = personCard.dataset.name;
+    const person = people.find(
+        (person) => people.name === personName
+    );
+    displayModal(person);
+});
+
+function displayModal(person){
+    const modalHTML = `
+        <h2>${person.name}</h2>
+        <div>
+            <img src=${person}>
+        </div>
+    `
+}
+
+
+// This closes the overlay when the mouse click is outside of the person's card
+overlay.addEventListener('click', (event) => {
+    const isOutside = !event.target.closest('.modal');
+    if(isOutside){
+        overlay.classList.remove('open');
+    }
+});
+
+
+// The overlay will close/disappear upon the push of the Escape key/button
+document.addEventListener('click', (event) => {
+    if(event.key === 'Escape'){
+        overlay.classList.remove('open');
+    }
+});

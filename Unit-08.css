@@ -3,15 +3,33 @@ body {
     background-color: rgb(250, 247, 247);
 }
 
+* {
+    box-sizing: border-box;
+}
+
 
 .grid-container {
+    border: 2px solid grey;;
     display: flex;
     flex-wrap: wrap;
 }
 .grid-container .card {
-    flex-basis: calc(23% - 45px);
+    /* flex-basis: calc(23.333% - 45px); */
     display: flex;
     align-items: center;
+}
+.grid {
+    border: 1px solid red;
+    max-width: ;
+    display: grid;
+    grid-template-columns: 425px 425px 425px;
+    grid-template-rows: 200px 200px 200px;
+}
+.column {
+   
+}
+.grid-container:after {
+   
 }
 
 .overlay {
@@ -63,6 +81,7 @@ h1 {
 
 .card {
     border: 2px solid lightgrey;
+    /* width: 1400px; */
     border-radius: 7px;
     background-color: white;
     margin: 15px;
