@@ -9,21 +9,19 @@ body {
 
 
 .grid-container {
-    border: 2px solid grey;;
     display: flex;
     flex-wrap: wrap;
 }
 .grid-container .card {
-    /* flex-basis: calc(23.333% - 45px); */
+    flex-basis: calc(23.333% - 45px);
     display: flex;
     align-items: center;
 }
 .grid {
-    border: 1px solid red;
-    max-width: ;
     display: grid;
     grid-template-columns: 425px 425px 425px;
     grid-template-rows: 200px 200px 200px;
+    justify-content: center;
 }
 .column {
    
@@ -70,11 +68,13 @@ body {
 
 h1 {
     /* border: 2px solid black; */
+    margin: 0 auto;
+    width: 1240px;
     text-align: left;
     font-family: "Source Sans 3", serif;
     font-weight: 400;
     font-size: 25px;
-    padding: 0 0 0 15px;
+    padding: 0;
 }
 
 
