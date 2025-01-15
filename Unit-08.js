@@ -3,7 +3,7 @@ const urlAPI = `https://randomuser.me/api/?results=12&inc=name, picture, email, 
 const gridContainer = document.querySelector('.grid-container');
 const overlay = document.querySelector('.modal');
 const modalContainer = document.querySelector('.modal-content');
-const modalCLose = document.querySelector('.modal-close');
+const modalClose = document.querySelector('.modal-close');
 
 // fetch data from API
 fetch(urlAPI)
@@ -80,38 +80,49 @@ gridContainer.addEventListener('click', e => {
 });
 
 
-modalCLose.addEventListener('click', () => {
+modalClose.addEventListener('click', () => {
     overlay.classList.add("hidden");
 });
 
 
-index.html.remove(employeeHTML && modalHTML);
+//index.html.remove(employeeHTML && modalHTML);
 
 
-card.addEventListener('click', (e) => {
-    const personCard = e.target.closest('.card');
+card.addEventListener('click', (event) => {
+    const personCard = event.target.closest('.card');
     if(!personCard) return;
 
     const personName = personCard.dataset.name;
     const person = people.find(
-        (person) => people.name === personName
+        (people) => people.name === personName
     );
     displayModal(person);
 });
 
+
+
 function displayModal(person){
     const modalHTML = `
-        <h2>${person.name}</h2>
-        <div>
-            <img src=${person}>
+        <img class"avatar" src="${person.large}" />
+            <div class="text-container">
+            <h2 class="name">${person.name.first} ${person.name.last}</h2>
+            <p class="email">${person.email}</p>
+            <p class="address">${person.address}</p>
+            <hr />
+            <p>${person.phone}</p>
+            <p class="address">${street}, ${state}, ${postcode}</p>
+            <p>Birthday: ${date.getMonth()}/ ${date.getDate()}/ ${date.getFullYear()}</p>
         </div>
-    `
+    `;
+
+    modalContent.innerHTML = modalHTML;
+    overlay.classList.add('open');
 }
 
 
 // This closes the overlay when the mouse click is outside of the person's card
-overlay.addEventListener('click', (event) => {
-    const isOutside = !event.target.closest('.modal');
+modalClose.addEventListener('click', (event) => {
+    const isOutside = !event.target.closest('.modal-close');
     if(isOutside){
         overlay.classList.remove('open');
     }
