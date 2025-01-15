@@ -88,36 +88,36 @@ modalClose.addEventListener('click', () => {
 //index.html.remove(employeeHTML && modalHTML);
 
 
-card.addEventListener('click', (event) => {
-    const personCard = event.target.closest('.card');
-    if(!personCard) return;
+// card.addEventListener('click', (event) => {
+//     const personCard = event.target.closest('.card');
+//     if(!personCard) return;
 
-    const personName = personCard.dataset.name;
-    const person = people.find(
-        (people) => people.name === personName
-    );
-    displayModal(person);
-});
+//     const personName = personCard.dataset.name;
+//     const person = people.find(
+//         (people) => people.name === personName
+//     );
+//     displayModal(person);
+// });
 
 
 
-function displayModal(person){
-    const modalHTML = `
-        <img class"avatar" src="${person.large}" />
-            <div class="text-container">
-            <h2 class="name">${person.name.first} ${person.name.last}</h2>
-            <p class="email">${person.email}</p>
-            <p class="address">${person.address}</p>
-            <hr />
-            <p>${person.phone}</p>
-            <p class="address">${street}, ${state}, ${postcode}</p>
-            <p>Birthday: ${date.getMonth()}/ ${date.getDate()}/ ${date.getFullYear()}</p>
-        </div>
-    `;
+// function displayModal(person){
+//     const modalHTML = `
+//         <img class"avatar" src="${person.large}" />
+//             <div class="text-container">
+//             <h2 class="name">${person.name.first} ${person.name.last}</h2>
+//             <p class="email">${person.email}</p>
+//             <p class="address">${person.address}</p>
+//             <hr />
+//             <p>${person.phone}</p>
+//             <p class="address">${street}, ${state}, ${postcode}</p>
+//             <p>Birthday: ${date.getMonth()}/ ${date.getDate()}/ ${date.getFullYear()}</p>
+//         </div>
+//     `;
 
-    modalContent.innerHTML = modalHTML;
-    overlay.classList.add('open');
-}
+//     modalContent.innerHTML = modalHTML;
+//     overlay.classList.add('open');
+// }
 
 
 // This closes the overlay when the mouse click is outside of the person's card
