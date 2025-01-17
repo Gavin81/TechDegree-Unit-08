@@ -4,6 +4,7 @@ const gridContainer = document.querySelector('.grid-container');
 const overlay = document.querySelector('.overlay');
 const modalContainer = document.querySelector('.modal-content');
 const modalClose = document.querySelector('.modal-close');
+const modal = document.querySelector('.modal');
 
 
 
@@ -71,6 +72,7 @@ function displayModal(index){
 }
 
 
+
 gridContainer.addEventListener('click', e => {
     // The click is not on the gridContainer itself
     if(e.target !== gridContainer){
@@ -82,6 +84,12 @@ gridContainer.addEventListener('click', e => {
 });
 
 
+// Click the overlay, the modal closes but doesn't return to the directory
+overlay.addEventListener('click', () => {
+    modal.classList.add('hidden');
+});
+
+
 modalClose.addEventListener('click', () => {
     overlay.classList.add("hidden");
 });
@@ -89,13 +97,14 @@ modalClose.addEventListener('click', () => {
 
 
 
-// This closes the overlay when the mouse click is outside of the person's card
-modalClose.addEventListener('click', (event) => {
-    const isOutside = !event.target.closest('.modal-close');
-    if(isOutside){
-        overlay.classList.remove('open');
-    }
-});
+// This closes the overlay when the mouse click is outside of the person's
+// card
+// modalClose.addEventListener('click', (event) => {
+//     const isOutside = !event.target.closest('.modal-close');
+//     if(isOutside){
+//         overlay.classList.remove('open');
+//     }
+// });
 
 
 // The overlay will close/disappear upon the push of the Escape key/button
