@@ -45,12 +45,14 @@ body {
     position: relative;
     text-align: center;
     background:  #fff;
+    border: 1px solid red;
     border: 1px solid #778;
     border-radius: 5px;
     padding: 30px 20px;
 }
 
 .modal-close {
+    border: 2px solid red;
     position: absolute;
     right: 15px;
     top: 5px;

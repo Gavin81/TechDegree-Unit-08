@@ -5,6 +5,8 @@ const overlay = document.querySelector('.overlay');
 const modalContainer = document.querySelector('.modal-content');
 const modalClose = document.querySelector('.modal-close');
 
+
+
 // fetch data from API
 fetch(urlAPI)
     .then(res => res.json())
@@ -64,8 +66,8 @@ function displayModal(index){
     `;
 
 
-    overlay.classList.remove("hidden");
     modalContainer.innerHTML = modalHTML;
+    overlay.classList.remove("hidden");
 }
 
 
@@ -85,7 +87,6 @@ modalClose.addEventListener('click', () => {
 });
 
 
-//index.html.remove(employeeHTML && modalHTML);
 
 
 // card.addEventListener('click', (event) => {
@@ -118,6 +119,7 @@ modalClose.addEventListener('click', () => {
 //     modalContent.innerHTML = modalHTML;
 //     overlay.classList.add('open');
 // }
+
 
 
 // This closes the overlay when the mouse click is outside of the person's card
