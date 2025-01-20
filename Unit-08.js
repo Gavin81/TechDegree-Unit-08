@@ -85,11 +85,13 @@ gridContainer.addEventListener('click', e => {
 
 
 // Click the overlay, the modal closes but doesn't return to the directory
-overlay.addEventListener('click', () => {
-    modal.classList.add('hidden');
-});
+// overlay.addEventListener('click', () => {
+//      modal.classList.add('hidden');
+// });
 
 
+
+// Click the X and you return to the employees list
 modalClose.addEventListener('click', () => {
     overlay.classList.add("hidden");
 });
