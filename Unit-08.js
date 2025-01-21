@@ -28,6 +28,7 @@ function displayEmployees(employeeData){
         let email = employee.email;
         let city = employee.location.city;
         let picture = employee.picture;
+        let street = employee.street;
 
 
         // Below is the template literal
@@ -38,6 +39,7 @@ function displayEmployees(employeeData){
                     <h2 class="name">${name.first} ${name.last}</h2>
                     <p class="email">${email}</p>
                     <p class="address">${city}</p>
+                    
                 </div>
             </div>
         `
@@ -61,12 +63,12 @@ function displayModal(index){
             <p class="address">${city}</p>
             <hr />
             <p>${phone}</p>
-            <p class="address">${street}, ${state} ${postcode}</p>
+            <p class="address">${street.number}, ${street.name} ${state} ${postcode}</p>
             <p>Birthday: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
         </div>
     `;
 
-
+    // console.log(street);
     modalContainer.innerHTML = modalHTML;
     overlay.classList.remove("hidden");
 }
