@@ -94,10 +94,10 @@ modalClose.addEventListener('click', () => {
 
 
 
-// Click the overlay, the modal closes but doesn't return to the directory
-// overlay.addEventListener('click', () => {
-//      modal.classList.add('hidden');
-// });
+//Click the overlay, the modal closes but doesn't return to the directory
+overlay.addEventListener('click', () => {
+     gridContainer.classList.add('open');
+});
 
 
 
