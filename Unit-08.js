@@ -45,6 +45,7 @@ function displayEmployees(employeeData){
         `
     });
 
+    // This inserts the employeeHTML directly into the HTML of the grid container.
     gridContainer.innerHTML = employeeHTML;
 }
 
@@ -68,15 +69,14 @@ function displayModal(index){
         </div>
     `;
 
-    // console.log(street);
+    
     modalContainer.innerHTML = modalHTML;
     overlay.classList.remove("hidden");
 }
 
 
-
+// Click an employee card and the modal will display.
 gridContainer.addEventListener('click', e => {
-    // The click is not on the gridContainer itself
     if(e.target !== gridContainer){
         const card = e.target.closest(".card");
         const index = card.getAttribute('data-index');
@@ -87,7 +87,7 @@ gridContainer.addEventListener('click', e => {
 
 
 
-// Click the X and you return to the employees list
+// Click the X on the modal and you return to the employees list
 modalClose.addEventListener('click', () => {
     overlay.classList.add("hidden");
 });
