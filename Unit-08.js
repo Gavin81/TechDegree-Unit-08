@@ -5,6 +5,23 @@ const overlay = document.querySelector('.overlay');
 const modalContainer = document.querySelector('.modal-content');
 const modalClose = document.querySelector('.modal-close');
 const modal = document.querySelector('.modal');
+const search = document.querySelector('.search');
+
+
+
+// The search function area
+search.addEventListener('keyup', e  => {
+    let currentValue = e.target.value.toLowerCase();
+    let employeeCard = document.querySelectorAll('h2.name');
+
+    employeeCard.forEach(employeeCard => {
+        if(employeeCard.textContent.toLowerCase().includes(currentValue)) {
+            employeeCard.parentNode.parentNode.style.display = 'block';
+        } else {
+            employeeCard.parentNode.parentNode.style.display = 'none';
+        }
+    })
+});
 
 
 
@@ -112,8 +129,9 @@ overlay.addEventListener('click', () => {
 
 
 // The overlay will close/disappear upon the push of the Escape key/button
-document.addEventListener('click', (event) => {
-    if(event.key === 'Escape'){
-        overlay.classList.remove('open');
-    }
-});
+// Currently doesn't work.
+// document.addEventListener('click', (event) => {
+//     if(event.key === 'Escape'){
+//         overlay.classList.remove('open');
+//     }
+// });

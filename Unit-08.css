@@ -58,7 +58,7 @@ body {
 }
 
 
-
+/* THE PAGE HEADING/TITLE */
 h1 {
     margin: 0 auto;
     width: 1240px;
@@ -70,7 +70,31 @@ h1 {
 }
 
 
+/* THE SEARCH AREA */
+.search-container {
+    border-radius: .5rem;
+    width: 292px;
+    padding: .25rem;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+.search-container img {
+    border-radius: 5px 0 0 5px;
+    width: 2rem;
+}
+.search-container input {
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: white;
+    margin-left: 0;
+    outline: none;
+    font-size: 1.3rem;
+}
 
+
+/* THE AREA OF EMPLOYEES */
 .card {
     border: 2px solid lightgrey;
     border-radius: 7px;
