@@ -9,14 +9,15 @@ const search = document.querySelector('.search');
 
 
 
-// The search function area
+// The search function area.
+// The following add Event Listener code is a simple example of a search.
 search.addEventListener('keyup', e  => {
     let currentValue = e.target.value.toLowerCase();
     let employeeCard = document.querySelectorAll('h2.name');
 
     employeeCard.forEach(employeeCard => {
         if(employeeCard.textContent.toLowerCase().includes(currentValue)) {
-            employeeCard.parentNode.parentNode.style.display = 'block';
+            employeeCard.parentNode.parentNode.style.display = '';
         } else {
             employeeCard.parentNode.parentNode.style.display = 'none';
         }
