@@ -127,3 +127,11 @@ h1 {
     font-weight: 200;
     font-size: 18px;
 }
+.left {
+    border: none;
+    padding: 5px 20px;
+}
+.right {
+    border: none;
+    padding: 5px 20px;
+}

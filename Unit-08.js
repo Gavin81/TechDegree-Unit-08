@@ -25,6 +25,9 @@ search.addEventListener('keyup', e  => {
 });
 
 
+// The code here is about switching from one employees card to the next.
+
+
 
 // fetch data from API
 fetch(urlAPI)
