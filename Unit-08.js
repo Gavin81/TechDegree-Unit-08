@@ -6,6 +6,8 @@ const modalContainer = document.querySelector('.modal-content');
 const modalClose = document.querySelector('.modal-close');
 const modal = document.querySelector('.modal');
 const search = document.querySelector('.search');
+const left = document.querySelector('.left');
+const right = document.querySelector('.right');
 
 
 
@@ -25,8 +27,11 @@ search.addEventListener('keyup', e  => {
 });
 
 
-// The code here is about switching from one employees card to the next.
-
+// The code here is about switching from one employee card to the next.
+// When clicking the left arrow on the modal.
+left.addEventListener('click', e => {
+    
+});
 
 
 // fetch data from API
