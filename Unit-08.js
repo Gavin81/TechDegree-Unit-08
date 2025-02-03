@@ -14,6 +14,7 @@ const right = document.querySelector('.right');
 // The search function area.
 // The following add Event Listener code is a simple example of a search.
 search.addEventListener('keyup', e  => {
+
     let currentValue = e.target.value.toLowerCase();
     let employeeCard = document.querySelectorAll('h2.name');
 
@@ -30,7 +31,28 @@ search.addEventListener('keyup', e  => {
 // The code here is about switching from one employee card to the next.
 // When clicking the left arrow on the modal.
 left.addEventListener('click', e => {
+    function displayModal(index) {
+
+        let {name, dob, phone, email, location:{city, street, state, postcode}, picture} = employees[index];
+        let date = new Date(dob.date);
     
+        const modalHTML = `
+            <img class="avatar" src="${picture.large}" />
+            <div class="text-container">
+                <h2 class="name">${name.first} ${name.last}</h2>
+                <p class="email">${email}</p>
+                <p class="address">${city}</p>
+                <hr />
+                <p>${phone}</p>
+                <p class="address">${street.number} ${street.name}, ${state} ${postcode}</p>
+                <p>Birthday: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
+            </div>
+        `;
+    
+        
+        modalContainer.innerHTML = modalHTML;
+        overlay.classList.remove("hidden");
+    }
 });
 
 
