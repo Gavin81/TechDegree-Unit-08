@@ -31,9 +31,11 @@ search.addEventListener('keyup', e  => {
 // The code here is about switching from one employee card to the next.
 // When clicking the left arrow on the modal.
 left.addEventListener('click', e => {
-    for(let i = 0; i < employees.length; i++) {
-        employees([i] - 1);
-    }
+    let modalData = document.querySelector('modal-data');
+    let dataIndex = document.querySelector('data-index');
+    displayModal(employees[i -1]);
+    displayModal(index);
+    displayModal(dataIndex[-1]);
 });
 
 
@@ -86,7 +88,7 @@ function displayModal(index){
     let date = new Date(dob.date);
 
     const modalHTML = `
-        <div class="left" data-index="${index}">
+        <div class="modal-data" data-index="${index}">
             <img class="avatar" src="${picture.large}" />
             <div class="text-container">
                 <h2 class="name">${name.first} ${name.last}</h2>
