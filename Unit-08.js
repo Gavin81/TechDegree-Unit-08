@@ -31,7 +31,9 @@ search.addEventListener('keyup', e  => {
 // The code here is about switching from one employee card to the next.
 // When clicking the left arrow on the modal.
 left.addEventListener('click', e => {
-    
+    for(let i = 0; i < employees.length; i++) {
+        employees([i] - 1);
+    }
 });
 
 
