@@ -31,11 +31,19 @@ search.addEventListener('keyup', e  => {
 // The code here is about switching from one employee card to the next.
 // When clicking the left arrow on the modal.
 left.addEventListener('click', e => {
-    let modalData = document.querySelector('modal-data');
-    let dataIndex = document.querySelector('data-index');
-    displayModal(employees[i -1]);
-    displayModal(index);
-    displayModal(dataIndex[-1]);
+    let modalData = document.querySelector('.modal-data');
+    let dataIndex = modalData.getAttribute('data-index');
+    
+    displayModal(dataIndex - 1);
+});
+
+
+// Switches between employees when click the right arrow button on the modal
+right.addEventListener('click', e => {
+    let modalData = document.querySelector('.modal-data');
+    let dataIndex = modalData.getAttribute('data-index');
+
+    displayModal(dataIndex + 1);
 });
 
 
