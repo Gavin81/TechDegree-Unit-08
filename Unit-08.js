@@ -32,7 +32,7 @@ search.addEventListener('keyup', e  => {
 // When clicking the left arrow on the modal.
 left.addEventListener('click', () => {
     let modalData = document.querySelector('.modal-data');
-    let dataIndex = modalData.getAttribute('data-index');
+    let dataIndex = Number(modalData.getAttribute('data-index'));
     
     displayModal(dataIndex - 1);
 });
@@ -41,7 +41,7 @@ left.addEventListener('click', () => {
 // Switches between employees when click the right arrow button on the modal
 right.addEventListener('click', () => {
     let modalData = document.querySelector('.modal-data');
-    let dataIndex = modalData.getAttribute('data-index');
+    let dataIndex = Number(modalData.getAttribute('data-index'));
 
     displayModal(dataIndex + 1);
 });
