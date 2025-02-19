@@ -33,8 +33,11 @@ search.addEventListener('keyup', e  => {
 left.addEventListener('click', () => {
     let modalData = document.querySelector('.modal-data');
     let dataIndex = Number(modalData.getAttribute('data-index'));
-    
     displayModal(dataIndex - 1);
+
+    if(dataIndex = 0){
+        dataIndex;
+    }
 });
 
 
@@ -42,7 +45,6 @@ left.addEventListener('click', () => {
 right.addEventListener('click', () => {
     let modalData = document.querySelector('.modal-data');
     let dataIndex = Number(modalData.getAttribute('data-index'));
-
     displayModal(dataIndex + 1);
 });
 
