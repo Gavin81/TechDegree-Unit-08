@@ -35,9 +35,14 @@ left.addEventListener('click', () => {
     let dataIndex = Number(modalData.getAttribute('data-index'));
     displayModal(dataIndex - 1);
 
-    if(dataIndex = 0){
-        dataIndex;
+
+    if(dataIndex === 0){
+       let nextIndex;
+       employees.length - 1;
     }
+    // if(dataIndex === 0){
+    //     dataIndex;
+    // }
 });
 
 
