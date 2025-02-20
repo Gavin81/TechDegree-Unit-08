@@ -39,10 +39,12 @@ left.addEventListener('click', () => {
     if(dataIndex === 0){
        let nextIndex;
        employees.length - 1;
+    } else if(dataIndex !== 0) {
+        dataIndex - 1;
     }
-    // if(dataIndex === 0){
-    //     dataIndex;
-    // }
+
+    displayModal(nextIndex);
+
 });
 
 
