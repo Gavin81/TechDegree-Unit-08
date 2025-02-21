@@ -33,12 +33,14 @@ search.addEventListener('keyup', e  => {
 left.addEventListener('click', () => {
     let modalData = document.querySelector('.modal-data');
     let dataIndex = Number(modalData.getAttribute('data-index'));
-    displayModal(dataIndex - 1);
+    console.log(dataIndex - 1);
+    //displayModal(dataIndex - 1);
 
 
     if(dataIndex === 0){
        //let nextIndex;
-       employees.length - 1;
+       displayModal(employees.length - 1);
+       //employees.length - 1;
        //displayModal(employees[11]);
        //displayModal(dataIndex - 1);
        //displayModal(index[11]);
