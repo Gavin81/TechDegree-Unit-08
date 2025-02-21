@@ -37,13 +37,17 @@ left.addEventListener('click', () => {
 
 
     if(dataIndex === 0){
-       let nextIndex;
-       employees.length - 1;
+       //let nextIndex;
+       //employees.length - 1;
+       displayModal(employees[11]);
+       //displayModal(dataIndex - 1);
     } else if(dataIndex !== 0) {
-        dataIndex - 1;
+        //dataIndex - 1;
+        //displayModal(nextIndex - 1);
+        //displayModal(dataIndex - 1);
     }
 
-    displayModal(nextIndex);
+    // displayModal(nextIndex);
 
 });
 
