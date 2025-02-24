@@ -28,47 +28,35 @@ search.addEventListener('keyup', e  => {
 });
 
 
+
 // The code here is about switching from one employee card to the next.
 // When clicking the left arrow on the modal.
 left.addEventListener('click', () => {
     let modalData = document.querySelector('.modal-data');
     let dataIndex = Number(modalData.getAttribute('data-index'));
-    //console.log(dataIndex - 1);
-    //displayModal(dataIndex - 1);
-
-
+    
     if(dataIndex === 0){
-       //let nextIndex;
        displayModal(employees.length - 1);
-       //employees.length - 1;
-       //displayModal(employees[11]);
-       //displayModal(dataIndex - 1);
-       //displayModal(index[11]);
     } else if(dataIndex !== 0) {
-        //dataIndex - 1;
-        //displayModal(nextIndex - 1);
         displayModal(dataIndex - 1);
     }
-
-    // displayModal(nextIndex);
-
 });
 
 
-// Switches between employees when click the right arrow button on the modal
+
+// Switches between employees when click the right arrow button on the 
+// modal
 right.addEventListener('click', () => {
     let modalData = document.querySelector('.modal-data');
-    let dataIndex = Number(modalData.getAttribute('data-index'));
-    // displayModal(dataIndex + 1);
-    //console.log(employees[0]);
+    let dataIndex = Number(modalData.getAttribute('data-index')); 
 
     if(dataIndex === 11){
         displayModal(0);
-        //displayModal(dataIndex[0]);
     } else {
-        //displayModal(dataIndex + 1);
+        displayModal(dataIndex + 1);
     }
 });
+
 
 
 // fetch data from API
