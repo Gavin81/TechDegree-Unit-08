@@ -63,9 +63,9 @@ right.addEventListener('click', () => {
     //console.log(employees[0]);
 
     if(dataIndex === 11){
-        displayModal(employees[0]);
+        displayModal(0);
         //displayModal(dataIndex[0]);
-    } else if (dataIndex !== 11) {
+    } else {
         //displayModal(dataIndex + 1);
     }
 });
