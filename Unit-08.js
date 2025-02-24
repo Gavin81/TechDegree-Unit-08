@@ -33,7 +33,7 @@ search.addEventListener('keyup', e  => {
 left.addEventListener('click', () => {
     let modalData = document.querySelector('.modal-data');
     let dataIndex = Number(modalData.getAttribute('data-index'));
-    console.log(dataIndex - 1);
+    //console.log(dataIndex - 1);
     //displayModal(dataIndex - 1);
 
 
@@ -59,7 +59,14 @@ left.addEventListener('click', () => {
 right.addEventListener('click', () => {
     let modalData = document.querySelector('.modal-data');
     let dataIndex = Number(modalData.getAttribute('data-index'));
-    displayModal(dataIndex + 1);
+    // displayModal(dataIndex + 1);
+    //console.log(dataIndex + 1);
+
+    if(dataIndex === 11){
+        displayModal(employees.length + 1);
+    } else if (dataIndex !== 11) {
+        displayModal(dataIndex + 1);
+    }
 });
 
 
